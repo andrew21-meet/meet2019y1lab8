@@ -8,20 +8,17 @@ word = input("what is your SECRET word? ")
 for space in range(1, 100):
     print (".")
 
-for i in range (20):
-    char = word[i]
-    word_letters.append(char)
-    word_length=  len(word_letters)
 
+wrong = 5
 letter = input("input a letter ")
 letters.append(letter)
 
-for correct in range (word_length):
-    if word[correct] == letter:
+for correct in range (100):
+    if letter == word[correct]:
         print ("Success!")
         break
     else:
-        print ("Wrong!  you have 5 tries left")
+        print ("Wrong!  you have"+ str (wrong) +'tries left')
         break
 
 letter = input("input another letter ")
@@ -32,7 +29,7 @@ for correct in range (100):
         letters.append(letter)
         break
     else:
-        print ("Wrong!  you have 4 tries left")
+        print ("Wrong!  you have"+str(wrong-1) +'tries left')
         break
 
 letter = input("input another letter ")
